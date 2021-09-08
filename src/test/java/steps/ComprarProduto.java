@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertEquals;
 
 
-public class ComprarCadeira {
+public class ComprarProduto {
     WebDriver driver;
     WebDriverWait wait;
     //Home home;
