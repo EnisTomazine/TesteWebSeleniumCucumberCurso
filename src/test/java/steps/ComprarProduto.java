@@ -16,6 +16,7 @@ import paginas.Carrinho;
 import paginas.Home;
 import paginas.ListaResultadoBusca;
 import paginas.Produto;
+import utils.Logs;
 import utils.Print;
 
 import java.io.IOException;
@@ -38,8 +39,10 @@ public class ComprarProduto {
     Produto paginaProduto;
     Carrinho carrinho;
     Print print;
+    Logs logs;
 
-    static String dataHora = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
+    static String dataHora = new SimpleDateFormat("yyyy-MM-dd HH-mm SS-sss").format(Calendar.getInstance().getTime());
+    static String dataHoraCsv = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
 
     @Dado("^que acesso o site madeiramadeira\\.com\\.br$")
     public void queAcessoOSiteMadeiramadeiraComBr()  throws IOException {
@@ -49,23 +52,30 @@ public class ComprarProduto {
         driver = Hooks.getDriver();
         wait = Hooks.getWait();
         print = Hooks.getPrint();
+        logs = new Logs();
+        logs = Hooks.getLogs();
+        //logs.iniciarLogCSV(dataHoraCsv);
         print.print(driver, dataHora, casoDeTeste,"Acessou o site");
+        logs.registrarCSV(casoDeTeste,"Acessou o site");
         System.out.println("que acesso o site");
 
     }
     @E("^concordo com os cookies$")
-    public void concordoComOsCookies() {
+    public void concordoComOsCookies() throws IOException {
         home = new Home(driver);
         home.clicaAceitaCookies();
         System.out.println("aceitou cookies");
+        logs.registrarCSV("Concordar com Cookies","Concordou com os Cookies");
     }
 
     @Quando("^clico no campo de busca e pesquiso o \"([^\"]*)\"$")
     public void clico_no_campo_de_busca_e_pesquiso_o(String produto) throws IOException{
+        //logs.iniciarLogCSV(dataHoraCsv+ "" + produto);
         String casoDeTeste = "Pesquisar o Produto";
         home.buscaPorProduto(produto);
         System.out.println("clico no campo de busca e pesquiso");
         print.print(driver, dataHora, casoDeTeste,"Digitar no campo de busca");
+        logs.registrarCSV(casoDeTeste,"Digitou no campo de busca o produto " + produto);
     }
 
     @Entao("^confirmo que aparece o nome \"([^\"]*)\"$")
@@ -77,14 +87,16 @@ public class ComprarProduto {
         assertEquals(produto, nomeTextoEsperado);
         System.out.println("confirmo que aparece o nome");
         print.print(driver, dataHora, casoDeTeste,"Confirmar Produto na lista");
+        logs.registrarCSV(casoDeTeste,"Confirmou Produto na lista " + produto);
     }
 
     @Entao("^o \"([^\"]*)\" do \"([^\"]*)\" pesquisado$")
-    public void o_do_pesquisado(String id, String produto) {
+    public void o_do_pesquisado(String id, String produto) throws IOException {
         String casoDeTeste = "Confirmar ID Produto ";
         String TextoEsperado = listaResultadoBusca.lerIdProduto(produto);
         assertEquals(id, TextoEsperado);
         System.out.println("confirmo que aparece o ID");
+        logs.registrarCSV(casoDeTeste,"Confirmou Id na lista" + id);
 
     }
 
@@ -94,6 +106,8 @@ public class ComprarProduto {
         listaResultadoBusca.clicaNoProduto(produto);
         System.out.println("clicou no Produto");
         print.print(driver, dataHora, casoDeTeste,"Seleciona produto na lista");
+        logs.registrarCSV(casoDeTeste,"Selecionou produto na lista " + produto);
+
     }
 
     @Entao("^confirmo se aparece o nome do \"([^\"]*)\"$")
@@ -105,21 +119,24 @@ public class ComprarProduto {
         //assertEquals(produto, TextoEsperado);
         System.out.println("confirma se aparece o nome do Produto");
         print.print(driver, dataHora, casoDeTeste,"Verifica pagina do produto");
+        logs.registrarCSV(casoDeTeste,"Verificou pagina do produto" + produto);
 
     }
 
     @Entao("^o \"([^\"]*)\" do produto$")
-    public void o_do_produto(String preco) {
+    public void o_do_produto(String preco) throws IOException {
         String TextoEsperado = paginaProduto.retornaPrecoProduto();
         assertEquals(preco, TextoEsperado);
         System.out.println("preco retornado" + TextoEsperado);
         System.out.println("Preço passado" + preco);
-        System.out.println("confirma se aparece o preco do Produto");
+        System.out.println("Confirma se aparece o preco do Produto");
+        logs.registrarCSV("Verifica preço","Confirmou se aparece o preco do Produto");
     }
 
     @Quando("^clico no botao comprar$")
-    public void clico_no_botao_comprar() {
+    public void clico_no_botao_comprar() throws IOException {
         paginaProduto.clicarParaComprar();
+        logs.registrarCSV("Clicar no botao Comprar","Clicou no botao comprar");
     }
 
     @Entao("^confirmo se aparece o \"([^\"]*)\" no carrinho$")
@@ -132,6 +149,7 @@ public class ComprarProduto {
         System.out.println("buscou o nome do Produto no carrinho: " + nomeProduto);
         Assert.assertTrue(nomeProduto.contains(produto));
         print.print(driver, dataHora, casoDeTeste,"Verifica produto no carrinho");
+        logs.registrarCSV(casoDeTeste,"Verificou produto no carrinho");
     }
 
 
