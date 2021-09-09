@@ -1,0 +1,474 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# encoding: UTF-8"
+      },
+      {
+        "line": 2,
+        "value": "# language: pt"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3884004200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Iniciar()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Pesquisar produto com clic na lupa",
+        "description": "",
+        "id": "comprar-cadeira;pesquisar-produto-com-clic-na-lupa;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1315724699,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.finalizar()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9034206101,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que acesso o site madeiramadeira.com.br",
+            "match": {
+              "location": "ComprarProduto.queAcessoOSiteMadeiramadeiraComBr()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 409105000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "concordo com os cookies",
+            "match": {
+              "location": "ComprarProduto.concordoComOsCookies()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 12881807700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clico no campo de busca e pesquiso o \"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira",
+                  "offset": 38
+                }
+              ],
+              "location": "ComprarProduto.clico_no_campo_de_busca_e_pesquiso_o(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 653345800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "confirmo que aparece o nome \"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira",
+                  "offset": 29
+                }
+              ],
+              "location": "ComprarProduto.confirmo_que_aparece_o_nome(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 61431101,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "o \"632562\" do \"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira\" pesquisado",
+            "match": {
+              "arguments": [
+                {
+                  "val": "632562",
+                  "offset": 3
+                },
+                {
+                  "val": "Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira",
+                  "offset": 15
+                }
+              ],
+              "location": "ComprarProduto.o_do_pesquisado(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 7880196199,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "clico no \"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira\" pesquisado",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira",
+                  "offset": 10
+                }
+              ],
+              "location": "ComprarProduto.clico_no_pesquisado(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1018051500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "confirmo se aparece o nome do \"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira",
+                  "offset": 31
+                }
+              ],
+              "location": "ComprarProduto.confirmo_se_aparece_o_nome_do(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 100764500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "o \"237,40\" do produto",
+            "match": {
+              "arguments": [
+                {
+                  "val": "237,40",
+                  "offset": 3
+                }
+              ],
+              "location": "ComprarProduto.o_do_produto(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 300282600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "clico no botao comprar",
+            "match": {
+              "location": "ComprarProduto.clico_no_botao_comprar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 4894604601,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "confirmo se aparece o \"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira\" no carrinho",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira",
+                  "offset": 23
+                }
+              ],
+              "location": "ComprarProduto.confirmo_se_aparece_o_no_carrinho(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@ComprarProduto"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2289416000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Iniciar()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Pesquisar produto com clic na lupa",
+        "description": "",
+        "id": "comprar-cadeira;pesquisar-produto-com-clic-na-lupa;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1258943599,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.finalizar()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8562358199,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que acesso o site madeiramadeira.com.br",
+            "match": {
+              "location": "ComprarProduto.queAcessoOSiteMadeiramadeiraComBr()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 353190700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "concordo com os cookies",
+            "match": {
+              "location": "ComprarProduto.concordoComOsCookies()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 8983772600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clico no campo de busca e pesquiso o \"Escrivaninha 1 Gaveta Facility Demobile\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Escrivaninha 1 Gaveta Facility Demobile",
+                  "offset": 38
+                }
+              ],
+              "location": "ComprarProduto.clico_no_campo_de_busca_e_pesquiso_o(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1619876799,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "confirmo que aparece o nome \"Escrivaninha 1 Gaveta Facility Demobile\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Escrivaninha 1 Gaveta Facility Demobile",
+                  "offset": 29
+                }
+              ],
+              "location": "ComprarProduto.confirmo_que_aparece_o_nome(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 55964399,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "o \"526413\" do \"Escrivaninha 1 Gaveta Facility Demobile\" pesquisado",
+            "match": {
+              "arguments": [
+                {
+                  "val": "526413",
+                  "offset": 3
+                },
+                {
+                  "val": "Escrivaninha 1 Gaveta Facility Demobile",
+                  "offset": 15
+                }
+              ],
+              "location": "ComprarProduto.o_do_pesquisado(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 5763288000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "clico no \"Escrivaninha 1 Gaveta Facility Demobile\" pesquisado",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Escrivaninha 1 Gaveta Facility Demobile",
+                  "offset": 10
+                }
+              ],
+              "location": "ComprarProduto.clico_no_pesquisado(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 3289814900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "confirmo se aparece o nome do \"Escrivaninha 1 Gaveta Facility Demobile\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Escrivaninha 1 Gaveta Facility Demobile",
+                  "offset": 31
+                }
+              ],
+              "location": "ComprarProduto.confirmo_se_aparece_o_nome_do(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 289695699,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "o \"159,90\" do produto",
+            "match": {
+              "arguments": [
+                {
+                  "val": "159,90",
+                  "offset": 3
+                }
+              ],
+              "location": "ComprarProduto.o_do_produto(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 197066600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "clico no botao comprar",
+            "match": {
+              "location": "ComprarProduto.clico_no_botao_comprar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 6026226600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "confirmo se aparece o \"Escrivaninha 1 Gaveta Facility Demobile\" no carrinho",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Escrivaninha 1 Gaveta Facility Demobile",
+                  "offset": 23
+                }
+              ],
+              "location": "ComprarProduto.confirmo_se_aparece_o_no_carrinho(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@ComprarProduto"
+          }
+        ]
+      }
+    ],
+    "name": "Comprar cadeira",
+    "description": "",
+    "id": "comprar-cadeira",
+    "keyword": "Funcionalidade",
+    "uri": "ComprarProduto.feature"
+  }
+]
