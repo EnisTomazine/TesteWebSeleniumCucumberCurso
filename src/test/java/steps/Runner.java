@@ -10,7 +10,12 @@ import org.testng.annotations.Test;
         glue     = { "steps"} ,  // Onde estao as definicoes de passos
         monochrome = true,
         dryRun   = false,
-        tags = {"@ComprarProduto"}
+        //tags = {"@ComprarProduto"},
+        plugin = {
+                "pretty",                               //Formatação visual do Cucumber
+                "html:target/reports/extentreports",    //Saida HTML do Relatório Simples
+                "json:target/reports/extentreports.json" //Saida Json com os dados
+        }
 )
 
 

@@ -41,8 +41,7 @@ public class ComprarProduto {
     Print print;
     Logs logs;
 
-    static String dataHora = new SimpleDateFormat("yyyy-MM-dd HH-mm SS-sss").format(Calendar.getInstance().getTime());
-    static String dataHoraCsv = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
+    static String dataHora = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
 
     @Dado("^que acesso o site madeiramadeira\\.com\\.br$")
     public void queAcessoOSiteMadeiramadeiraComBr()  throws IOException {
@@ -149,10 +148,6 @@ public class ComprarProduto {
         print.print(driver, dataHora, casoDeTeste,"Verifica produto no carrinho");
         logs.registrarCSV(casoDeTeste,"Verificou produto no carrinho");
     }
-
-
-
-
 }
 
 
