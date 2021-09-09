@@ -54,7 +54,6 @@ public class ComprarProduto {
         print = Hooks.getPrint();
         logs = new Logs();
         logs = Hooks.getLogs();
-        //logs.iniciarLogCSV(dataHoraCsv);
         print.print(driver, dataHora, casoDeTeste,"Acessou o site");
         logs.registrarCSV(casoDeTeste,"Acessou o site");
         System.out.println("que acesso o site");
@@ -70,7 +69,6 @@ public class ComprarProduto {
 
     @Quando("^clico no campo de busca e pesquiso o \"([^\"]*)\"$")
     public void clico_no_campo_de_busca_e_pesquiso_o(String produto) throws IOException{
-        //logs.iniciarLogCSV(dataHoraCsv+ "" + produto);
         String casoDeTeste = "Pesquisar o Produto";
         home.buscaPorProduto(produto);
         System.out.println("clico no campo de busca e pesquiso");

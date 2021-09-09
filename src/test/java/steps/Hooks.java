@@ -13,7 +13,6 @@ import utils.Print;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
 
 public class Hooks {
     public static WebDriver driver;
@@ -33,7 +32,6 @@ public class Hooks {
         print = new Print();
         logs = new Logs();
         logs.iniciarLogCSV(dataHora);
-
     }
 
     @After
@@ -53,7 +51,6 @@ public class Hooks {
     public static Logs getLogs(){
         return logs;
     }
-
     public static void abrirUrl(String url){
         driver.get(url);
     }
