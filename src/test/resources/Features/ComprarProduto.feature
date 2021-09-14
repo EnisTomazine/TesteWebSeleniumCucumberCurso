@@ -1,6 +1,6 @@
 # encoding: UTF-8
 # language: pt
-Funcionalidade: Comprar cadeira
+Funcionalidade: Comprar Produto
 
     @ComprarProduto
     Esquema do Cenario: Pesquisar produto com clic na lupa
@@ -18,6 +18,6 @@ Funcionalidade: Comprar cadeira
         Exemplos:
             |produto| id| preco |
             |"Cabeceira Casal Estofada Uvaia CabeCasa MadeiraMadeira"   | "632562"| "237,40"|
-            |"Escrivaninha 1 Gaveta Facility Demobile"                  | "526413"| "159,90"|
+            |"Escrivaninha 1 Gaveta Facility Demobile"                  | "526413"| "159,89"|
 
 
